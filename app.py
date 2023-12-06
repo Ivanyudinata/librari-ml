@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask import render_template
 
 app = Flask(__name__)
@@ -6,4 +6,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template("index.html")
+    return jsonify({ 'msg': "Hello world" })
